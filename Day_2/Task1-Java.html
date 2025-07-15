@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Check Your Grade</title>
+    <style>
+        * {
+            box-sizing: border-box;
+          }
+        body {
+            font-family: sans-serif;
+            background-color:#e3dcdc;
+            padding-top: 70px;
+        }
+        button {
+           background-color:rgb(33, 28, 28);
+           color: #c1bdbd;
+        }
+        
+        button:hover {
+            box-shadow: 5px 5px 10px rgba(6, 0, 0, 0.15);
+            cursor: pointer;
+        }
+        button:active {
+            transition: all 5ms ease-in-out;
+            background-color:rgb(254, 224, 224);
+            box-shadow:none;
+        }
+        input {
+            margin: 20px;
+        }
+        
+        .RI {
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+            border: 3px solid rgb(250, 231, 231);
+            border-radius: 20px ;
+            background-color: rgb(255, 255, 255);
+            padding: 25px;
+            margin: 0 auto;
+            width: fit-content;
+            padding-bottom: 20px;
+            box-shadow: 3px 4px 5px rgba(43, 15, 15, 0.15);
+            
+        }
+        .theoutput {
+             align-content: center;
+            text-align: center;
+            color: rgb(213, 59, 20);
+            width: fit-content;
+            margin:20px auto;
+           
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="RI">
+        
+        <input type="text" id="name" placeholder="type your name" required >
+        <br>
+        <input type="number" id="degree" placeholder="type your degree" required>
+        <br>
+        <button onclick="func()">احسب التقدير</button>
+    </div>
+    <div class="theoutput">
+    <h2 id="output"></h2>
+    <h2 id="display"></h2>
+    </div>
+
+    <script>
+        function func() {
+            let name = document.getElementById("name").value;
+            let degree = Number(document.getElementById("degree").value);
+
+            document.getElementById("output").innerHTML = "Welcome, " + name + "!";
+
+             if (degree < 0 || degree > 100 ) {
+               alert("Degree must be from 1 to 100");
+            } else if (degree >= 85) {
+                document.getElementById("display").innerHTML = "ممتاز";
+            } else if (degree >= 75) {
+                document.getElementById("display").innerHTML = "جيد جدا";
+            } else if (degree >= 65) {
+                document.getElementById("display").innerHTML = "جيد";
+            } else if (degree >= 50) {
+                document.getElementById("display").innerHTML = "مقبول";
+            } else {
+                document.getElementById("display").innerHTML = "راسب";
+            }
+
+        }
+    </script>
+</body>
+</html>

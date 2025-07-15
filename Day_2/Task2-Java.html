@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome Page</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #d6d2d2;
+      margin: 0;
+      padding: 0;
+     
+    }
+
+    nav {
+      background-color: #212020;
+      color: rgb(250, 245, 245);
+      padding: 15px;
+      
+    }
+
+    table {
+      margin: 50px auto;
+      background-color: white;
+      padding: 25px;
+      border: 2px solid #ccc;
+      border-radius: 7px;
+     
+    }
+    table:hover{
+            box-shadow: inset;
+            background-color: rgb(76, 41, 41);
+            cursor: pointer;
+            transition: all .5s ease-in-out;
+    }
+
+    td {
+      padding:20px;
+      margin-left:50px;
+    }
+     tr {
+      padding:20px;
+      margin-left:50px;
+    }
+
+   
+    .p {
+        color: white;
+        text-decoration: none;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    .pp {
+        color: rgb(164, 82, 10);
+        text-decoration: none;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    .ppp {
+        color: rgb(236, 217, 8);
+        text-decoration: none;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+    .pppp {
+        color: rgb(10, 98, 250);
+        text-decoration: none;
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+
+    button {
+      padding: 11px 15px;
+      background-color: #130505;
+      color: white;
+      cursor: pointer;
+      border: 8px;
+    }
+
+     input[type="text"] {
+      padding: 8px;
+      width: 100%;
+    }
+    
+
+    h1 {
+      text-align: center;
+      font-size: 40px;
+      color: rgb(233, 39, 9);
+      margin-top: 17px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    
+    <a class="p">Home</a>
+    <a href="https://www.facebook.com/kareem.khairt" class="pp">Facebook</a>
+    <a href="https://github.com/kareemkhairt4" class="ppp">github</a>
+    <a href="krymghn@gmail.com"class="pppp">Contact me</a>
+    <h2 style="text-align: center;">Welcome To My Page</h2>
+  </nav>
+
+  <table>
+    <tr>
+      <td> Please Enter Your Name:</td>
+      <td><input type="text" id="name" placeholder="Type Your Name"></td>
+    </tr>
+    <tr>
+      <td style="text-align: center;">
+        <div class="but"><button onclick="func()"> Enter </button></div>
+      </td>
+    </tr>
+  </table>
+
+  <h1 id="print"></h2>
+
+  <script>
+    function func() {
+      let name = document.getElementById("name").value;
+      if(name.length == 0) {
+        document.getElementById("print").innerText = "Please Enter Your Name.";
+      } else {
+        document.getElementById("print").innerText = "Hello, " + name + "!";
+      }
+    }
+  </script>
+
+</body>
+</html>

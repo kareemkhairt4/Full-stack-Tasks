@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(70deg, rgb(184, 99, 99), black);
+            min-height: 100vh;
+            padding: 50px 0;
+            margin: 0;
+        }
+
+        .log-form {
+            width: fit-content;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: aliceblue;
+        }
+
+        select,
+        input,
+        button,
+        textarea {
+            display: block;
+            width: 100%;
+        }
+
+        .thead tr th,
+        .thead tr td {
+            padding: 20px;
+        }
+        .thead tr th{
+            background-color: aquamarine;
+        }
+
+        .thead {
+            margin: 0 auto;
+            background-color:aliceblue;
+        }
+
+       
+    </style>
+
+</head>
+
+<body>
+    <form class="log-form">
+
+        <label for="name">FullName:</label>
+        <input type="text" id="name" name="Username" />
+        </br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="Email" name="Email" />
+
+
+        </br>
+        <label for="Gender">Gender:</label>
+        <select name="Gender" id="">
+            <option value="m">Male</option>
+            <option value="f">Female</option>
+        </select>
+        </br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message">
+                </textarea>
+        </br>
+        <button type="submit"> send data</button>
+    </form>
+
+
+    <table border="1" class="thead">
+
+        <tr>
+            <th> Id</th>
+            <th> Name</th>
+            <th> Subject</th>
+            <th> Grade</th>
+        </tr>
+        <tr>
+            <td> 1</td>
+            <td> Kareem</td>
+            <td> Math</td>
+            <td> 99</td>
+        </tr>
+        <tr>
+            <td> 2</td>
+            <td> Mohamed</td>
+            <td> history</td>
+            <td> 88</td>
+        </tr>
+        <tr>
+            <td> 3</td>
+            <td> Khairy</td>
+            <td> science</td>
+            <td> 77</td>
+        </tr>
+    </table>
+
+
+</body>
+
+</html>
