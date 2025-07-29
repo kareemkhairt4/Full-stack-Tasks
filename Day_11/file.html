@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+  
+  <div id="result">Loading...</div>
+
+  <script>
+    fetch("http://localhost/Day_11/api.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        name: "Kareem Khairy",
+        email: "kareem@gmail.com",
+        age : 21
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("result").innerText = JSON.stringify(data, null, 2);
+      }
+    )
+  </script>
+</body>
+</html>
