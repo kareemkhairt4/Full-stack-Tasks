@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Course</title>
+</head>
+<body>
+
+    <form id="form" method="post">
+        <input type="text" name="title" placeholder="Type your title">
+        <input type="text" name="description" placeholder="Type Description">
+        <input type="number" name="hours" placeholder="Type Hours">
+        <input type="number" name="price" placeholder="Type Price">
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        var form = document.getElementById("form");
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+             formData = {
+                title: form.title.value,
+                description: form.description.value,
+                hours: form.hours.value,
+                price: form.price.value
+            };
+
+            fetch("http://localhost/Day_13/Task2.php", {
+                method: "POST",
+                body: JSON.stringify(formData),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+            })
+        });
+    </script>
+
+</body>
+</html>
